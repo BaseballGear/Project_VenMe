@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:text="Items Scanned"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:text=""
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:id="@+id/item"/>
+
+    <ListView
+        android:layout_width="370dp"
+        android:layout_height="400dp"
+        android:paddingBottom="30dp"
+        android:layout_gravity="center"
+        android:id="@+id/theContents"
+        android:paddingLeft="10dp">
+    </ListView>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:paddingBottom="10sp"
+        android:text="Make Payment"
+        android:id="@+id/payVender"/>
+
+</LinearLayout>

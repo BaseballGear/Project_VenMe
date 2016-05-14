@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:textAlignment="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Paying The Vender"
+        android:id="@+id/payingTheVender"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="55dp"
+        android:textSize="30dp" />
+    <TextView
+        android:layout_width="300dp"
+        android:hint="The venders PP email"
+        android:layout_height="75dp"
+        android:id="@+id/venderEmail"
+        android:layout_below="@+id/payingTheVender"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:id="@+id/amountToPay"
+        android:hint="Payment Amount"
+        android:layout_below="@+id/venderEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="Pay with Paypal"
+        android:id="@+id/makePaymentBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="55dp"/>
+
+</LinearLayout>

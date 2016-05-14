@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.productions.baseballgear.projectvenme" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".loginUsers">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login to Home Screen-->
+        <activity android:name=".homeScreen"></activity>
+        <!-- Register Button(Login Screen) to Register Screen -->
+        <activity android:name=".registerScreen"></activity>
+        <!-- Register Screen to User Info Screen -->
+        <activity android:name=".userInfo"></activity>
+        <!-- Home Screen To Scan Item Screen -->
+        <activity android:name=".scanTheQR"></activity>
+        <!--Scan QR to Checkout Screen -->
+        <!-- Home to Account Info -->
+        <activity android:name=".accountInfo"></activity>
+        <!-- The scanner to scanList -->
+        <activity android:name=".theScannedItems"></activity>
+        <!-- The payPal screen -->
+        <activity android:name=".paypalPaymentScreen"></activity>
+
+        <!-- THIS IS THE ZBAR QR CODE ACTIVITIES -->
+        <activity android:name=".SimpleScannerActivity"
+            android:label="@string/simple_scanner_activity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".SimpleScannerFragmentActivity"
+            android:label="@string/simple_scanner_fragment_activity">
+        </activity>
+
+
+        <!-- THIS IS WHERE THE PAYPAL ACTIVITIES ARE BEING PUT -->
+        <activity
+            android:name="com.paypal.android.MEP.PayPalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity"/>
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+    </application>
+
+</manifest>
